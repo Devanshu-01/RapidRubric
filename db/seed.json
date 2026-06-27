@@ -1,0 +1,207 @@
+{
+  "_note": "Database source data for RapidRubric TA Review feature. Password for all accounts: Password123!",
+  "profiles": [
+    {
+      "id": "11111111-1111-1111-1111-111111111111",
+      "full_name": "Dr. Pat Instructor",
+      "email": "instructor@test.com",
+      "role": "instructor",
+      "password_hash": "$2a$12$ZqXcc.JKuNdol7viDjf0uedPObAXx2NU4VWKzGWaWwOeegYi.zgau"
+    },
+    {
+      "id": "22222222-2222-2222-2222-222222222222",
+      "full_name": "Taylor TA",
+      "email": "ta1@test.com",
+      "role": "ta",
+      "password_hash": "$2a$12$18GXkzChtuhnlOr7K1uaWuE3oDRv0TIP4YRRM2dpkL0p610FWncNe"
+    },
+    {
+      "id": "33333333-3333-3333-3333-333333333333",
+      "full_name": "Sam Student",
+      "email": "student1@test.com",
+      "role": "student",
+      "password_hash": "$2a$12$xtrlh8LjxAQ08dpbmodGZeawKDm.6FLf4p4ZwCP4xY/ZDkhEfMYkS"
+    },
+    {
+      "id": "44444444-4444-4444-4444-444444444444",
+      "full_name": "Riley Student",
+      "email": "student2@test.com",
+      "role": "student",
+      "password_hash": "$2a$12$6a4vjZ2cDkIcyIR7GXWexOyY41zFgt7h37Evm1XGyTO6NnMCAL/ru"
+    }
+  ],
+  "rubrics": [
+    {
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "instructor_id": "11111111-1111-1111-1111-111111111111",
+      "title": "Essay 1 — Argumentative Writing",
+      "criteria": [
+        {
+          "id": "c1",
+          "name": "Thesis & Argument",
+          "description": "Clear, arguable thesis sustained throughout.",
+          "max_score": 10
+        },
+        {
+          "id": "c2",
+          "name": "Evidence & Citations",
+          "description": "Claims supported with cited evidence.",
+          "max_score": 10
+        },
+        {
+          "id": "c3",
+          "name": "Structure & Organization",
+          "description": "Logical flow and paragraph cohesion.",
+          "max_score": 10
+        },
+        {
+          "id": "c4",
+          "name": "Grammar & Style",
+          "description": "Mechanics, clarity, and academic tone.",
+          "max_score": 10
+        }
+      ],
+      "locked": true
+    }
+  ],
+  "assignments": [
+    {
+      "id": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "rubric_id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "ta_id": "22222222-2222-2222-2222-222222222222",
+      "title": "Essay 1 — Argumentative Writing",
+      "allow_resubmission": true,
+      "locked": true
+    }
+  ],
+  "submissions": [
+    {
+      "id": "cccccccc-cccc-cccc-cccc-ccccccccccc1",
+      "assignment_id": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "student_id": "33333333-3333-3333-3333-333333333333",
+      "ta_id": "22222222-2222-2222-2222-222222222222",
+      "storage_path": "submissions/33333333-3333-3333-3333-333333333333/essay1_A.pdf",
+      "comments": "Please review my draft.",
+      "status": "pending_ta_review"
+    },
+    {
+      "id": "cccccccc-cccc-cccc-cccc-ccccccccccc2",
+      "assignment_id": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "student_id": "44444444-4444-4444-4444-444444444444",
+      "ta_id": "22222222-2222-2222-2222-222222222222",
+      "storage_path": "submissions/44444444-4444-4444-4444-444444444444/essay1_B.pdf",
+      "comments": "Please review my draft.",
+      "status": "pending_ta_review"
+    }
+  ],
+  "ai_feedback": [
+    {
+      "id": "dddddddd-dddd-dddd-dddd-ddddddddddd1",
+      "submission_id": "cccccccc-cccc-cccc-cccc-ccccccccccc1",
+      "criteria": [
+        {
+          "id": "c1",
+          "score": 7,
+          "feedback": "Thesis is present but could be sharper and more specific."
+        },
+        {
+          "id": "c2",
+          "score": 6,
+          "feedback": "Several claims lack citations; add sources for the second section."
+        },
+        {
+          "id": "c3",
+          "score": 8,
+          "feedback": "Well organized; transitions between sections are smooth."
+        },
+        {
+          "id": "c4",
+          "score": 7,
+          "feedback": "Generally clean prose with a few comma splices."
+        }
+      ],
+      "flagged_issues": [
+        "Possible uncited claim",
+        "Check thesis specificity"
+      ],
+      "summary": "AI first-pass complete. Review per-criterion feedback before release.",
+      "ai_baseline": [
+        {
+          "id": "c1",
+          "score": 7,
+          "feedback": "Thesis is present but could be sharper and more specific."
+        },
+        {
+          "id": "c2",
+          "score": 6,
+          "feedback": "Several claims lack citations; add sources for the second section."
+        },
+        {
+          "id": "c3",
+          "score": 8,
+          "feedback": "Well organized; transitions between sections are smooth."
+        },
+        {
+          "id": "c4",
+          "score": 7,
+          "feedback": "Generally clean prose with a few comma splices."
+        }
+      ],
+      "status": "pending_ta_review"
+    },
+    {
+      "id": "dddddddd-dddd-dddd-dddd-ddddddddddd2",
+      "submission_id": "cccccccc-cccc-cccc-cccc-ccccccccccc2",
+      "criteria": [
+        {
+          "id": "c1",
+          "score": 5,
+          "feedback": "Thesis is vague and shifts between paragraphs."
+        },
+        {
+          "id": "c2",
+          "score": 4,
+          "feedback": "Evidence is thin and mostly uncited."
+        },
+        {
+          "id": "c3",
+          "score": 6,
+          "feedback": "Structure is acceptable but the conclusion is abrupt."
+        },
+        {
+          "id": "c4",
+          "score": 6,
+          "feedback": "Frequent run-on sentences reduce readability."
+        }
+      ],
+      "flagged_issues": [
+        "Possible uncited claim",
+        "Check thesis specificity"
+      ],
+      "summary": "AI first-pass complete. Review per-criterion feedback before release.",
+      "ai_baseline": [
+        {
+          "id": "c1",
+          "score": 5,
+          "feedback": "Thesis is vague and shifts between paragraphs."
+        },
+        {
+          "id": "c2",
+          "score": 4,
+          "feedback": "Evidence is thin and mostly uncited."
+        },
+        {
+          "id": "c3",
+          "score": 6,
+          "feedback": "Structure is acceptable but the conclusion is abrupt."
+        },
+        {
+          "id": "c4",
+          "score": 6,
+          "feedback": "Frequent run-on sentences reduce readability."
+        }
+      ],
+      "status": "pending_ta_review"
+    }
+  ]
+}
